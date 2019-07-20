@@ -1,6 +1,8 @@
 import React from 'react';
 import TableComponent from '../../Component/TableCompoenent/TableComponent';
 
+import './StocksComponent.css'
+
 const socketURL = 'ws://stocks.mnet.website';
 
 export default class StocksComponent extends React.Component {
@@ -21,26 +23,22 @@ export default class StocksComponent extends React.Component {
 
     componentDidMount() {
         this.webSocket.onopen = () => {
-            console.log('Connection Established');
+            console.log('Connection Established!');
         }
 
         this.webSocket.onmessage = event => {
-            let socketData = JSON.parse(event.data);
-            let stocks = {};
-            console.log(socketData);    
-            socketData.forEach(data => {
+            let stockDataMessage = JSON.parse(event.data);
+
+            let state_stocks = {...this.state.stockData };
+
+            stockDataMessage.forEach(data => {
                 let key = data[0];
                 let value = data[1];
-                stocks[key] = parseFloat(value).toFixed(2);
+                state_stocks[key] = parseFloat(value).toFixed(2);
             });
-
-            let sorted_stocks = {...this.state.stockData };
-            Object.keys(stocks).sort().forEach(function(key) {
-                sorted_stocks[key] = stocks[key];
-             });
-
+            
             this.setState({
-                stockData: sorted_stocks
+                stockData: state_stocks
             });
         }
 

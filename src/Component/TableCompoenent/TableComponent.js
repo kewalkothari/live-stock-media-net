@@ -1,18 +1,18 @@
 import React from 'react';
 import TableRowComponent from '../TableRowComponent/TableRowComponent';
+import './TableComponent.css'
 
 export default class TableComponent extends React.Component {
 
     generateRows() {
         let rows = [];
-        let date = new Date();
 
         Object.keys(this.props.tableData).forEach(element => {
             rows.push(
                 <TableRowComponent 
                     stockName={element} 
                     stockPrice={this.props.tableData[element]}
-                    updateTime={date.getTime()}/>
+                    key={element}/>
             )
         });
 
@@ -21,14 +21,15 @@ export default class TableComponent extends React.Component {
 
     render() {
         let rows = this.generateRows();
-        var keys = [];
-        for(var k in this.props.tableData) keys.push(k);
         return ( 
-            <table border="1px" cellSpacing="0">
+            <table>
                 <thead>
-                    <th>Ticker</th>
-                    <th>Price</th>
-                    <th>Last Updated</th>
+                    <tr>
+                        <th>Ticker</th>
+                        <th>Price</th>
+                        <th>Trend</th>
+                        <th>Last Updated</th>
+                    </tr>
                 </thead>
                 <tbody>
                     {rows}
