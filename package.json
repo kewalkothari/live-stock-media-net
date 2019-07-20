@@ -2,7 +2,7 @@
   "name": "stocks",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http:/kewalkothari.github.io/live-stock-media-net",
+  "homepage": "https://kewalkothari.github.io/live-stock-media-net",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
