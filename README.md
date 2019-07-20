@@ -1,3 +1,7 @@
+![Build Status](https://travis-ci.com/kewalkothari/live-stock-media-net.svg?branch=master)
+<br />
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
