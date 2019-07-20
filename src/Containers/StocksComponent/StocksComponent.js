@@ -12,7 +12,7 @@ export default class StocksComponent extends React.Component {
         this.state = {
             stockData: {}
         }
-        this.webSocket = new window.WebSocket(socketURL);
+        this.webSocket = new WebSocket(socketURL);
     }
 
     render() {
