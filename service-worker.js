@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/kewalkothari.github.io/live-stock-media-net/precache-manifest.ace1102f61a041ee2bc7970a867a1511.js"
+  "/kewalkothari.github.io/live-stock-media-net/precache-manifest.48c25a11437c52903d0013febadc7e61.js"
 );
 
 self.addEventListener('message', (event) => {
