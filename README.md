@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-=======
-![Build Status](https://travis-ci.com/kewalkothari/live-stock-media-net.svg?branch=master)
-<br />
-
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
->>>>>>> 0528ce97d429e39ec6104d5f7481d3189a3b5ffa
-
-## Live Stock Market App
+# Live Stock Market App
 This is one of my assignments which subscribes to a web socket server which gives dummy stock price updates.
 
 ## Build status
