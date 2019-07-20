@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/kewalkothari.github.io/live-stock-media-net/static/css/main.f689211e.chunk.css",
-    "main.js": "/kewalkothari.github.io/live-stock-media-net/static/js/main.f31493df.chunk.js",
-    "main.js.map": "/kewalkothari.github.io/live-stock-media-net/static/js/main.f31493df.chunk.js.map",
-    "runtime~main.js": "/kewalkothari.github.io/live-stock-media-net/static/js/runtime~main.11b4b328.js",
-    "runtime~main.js.map": "/kewalkothari.github.io/live-stock-media-net/static/js/runtime~main.11b4b328.js.map",
-    "static/js/2.6d889f34.chunk.js": "/kewalkothari.github.io/live-stock-media-net/static/js/2.6d889f34.chunk.js",
-    "static/js/2.6d889f34.chunk.js.map": "/kewalkothari.github.io/live-stock-media-net/static/js/2.6d889f34.chunk.js.map",
-    "index.html": "/kewalkothari.github.io/live-stock-media-net/index.html",
-    "precache-manifest.48c25a11437c52903d0013febadc7e61.js": "/kewalkothari.github.io/live-stock-media-net/precache-manifest.48c25a11437c52903d0013febadc7e61.js",
-    "service-worker.js": "/kewalkothari.github.io/live-stock-media-net/service-worker.js",
-    "static/css/main.f689211e.chunk.css.map": "/kewalkothari.github.io/live-stock-media-net/static/css/main.f689211e.chunk.css.map"
+    "main.css": "/live-stock-media-net/static/css/main.f689211e.chunk.css",
+    "main.js": "/live-stock-media-net/static/js/main.8c3924c3.chunk.js",
+    "main.js.map": "/live-stock-media-net/static/js/main.8c3924c3.chunk.js.map",
+    "runtime~main.js": "/live-stock-media-net/static/js/runtime~main.c67c4a5b.js",
+    "runtime~main.js.map": "/live-stock-media-net/static/js/runtime~main.c67c4a5b.js.map",
+    "static/js/2.6d889f34.chunk.js": "/live-stock-media-net/static/js/2.6d889f34.chunk.js",
+    "static/js/2.6d889f34.chunk.js.map": "/live-stock-media-net/static/js/2.6d889f34.chunk.js.map",
+    "index.html": "/live-stock-media-net/index.html",
+    "precache-manifest.e195900826f60a4fa3330de4480071fa.js": "/live-stock-media-net/precache-manifest.e195900826f60a4fa3330de4480071fa.js",
+    "service-worker.js": "/live-stock-media-net/service-worker.js",
+    "static/css/main.f689211e.chunk.css.map": "/live-stock-media-net/static/css/main.f689211e.chunk.css.map"
   }
 }
