@@ -8,10 +8,6 @@ export default class TableRowComponent extends React.Component {
     color = 'black';
     updateTime = '';
 
-    constructor(props) {
-        super(props);
-    }
-
     componentWillUpdate() {
 
         if (+this.stockPrice > +this.props.stockPrice) {

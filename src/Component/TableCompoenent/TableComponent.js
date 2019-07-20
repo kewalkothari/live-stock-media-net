@@ -3,10 +3,6 @@ import TableRowComponent from '../TableRowComponent/TableRowComponent';
 
 export default class TableComponent extends React.Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     generateRows() {
         let rows = [];
         let date = new Date();
