@@ -1,0 +1,12 @@
+.increasePrice {
+    background-color:#3CB371;
+}
+
+.decreasePrice {
+    background-color:#F08080;
+}
+
+.chartBackground {
+    width: 150px;
+    text-align: center;
+}
