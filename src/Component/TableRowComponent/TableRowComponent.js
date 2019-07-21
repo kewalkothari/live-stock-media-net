@@ -1,16 +1,15 @@
 import React from 'react';
 import SparkLineComponent from '../SparkLineComponent/SparkLineComponent';
-
+import * as Constants from '../../Constants/constant_strings';
 import './TableRowComponent.css';
 
 export default class TableRowComponent extends React.Component {
 
-    stockName = '';
+    stockName = Constants.StringUtility.EMPTY;
     stockPrice = -1;
-    lastUpdated = '';
-    colorClass = '';
+    stockHistory = [];
+    colorClass = Constants.StringUtility.EMPTY;
     updateTimeStamp = 0;
-    stockHistory = []
 
     constructor(props) {
         super(props)
@@ -20,41 +19,47 @@ export default class TableRowComponent extends React.Component {
     }
 
     formatAMPM(date) {
-        var hours = date.getHours();
-        var minutes = date.getMinutes();
-        var seconds = date.getSeconds();
-        var ampm = hours >= 12 ? 'PM' : 'AM';
+        let hours = date.getHours();
+        let minutes = date.getMinutes();
+        let seconds = date.getSeconds();
+        let ampm = hours >= 12 ? Constants.TimeString.PM : Constants.TimeString.AM;
         hours = hours % 12;
         hours = hours ? hours : 12;
-        minutes = minutes < 10 ? '0'+minutes : minutes;
-        seconds = seconds < 10 ? '0'+seconds : seconds;
-        var strTime = hours + ':' + minutes + ':' + seconds + ' ' + ampm;
+        minutes = minutes < 10 ? Constants.TimeString.ZERO + minutes : minutes;
+        seconds = seconds < 10 ? Constants.TimeString.ZERO + seconds : seconds;
+        let strTime = hours + Constants.StringUtility.COLON + minutes + Constants.StringUtility.COLON 
+                        + seconds + Constants.StringUtility.SPACE + ampm;
+
         return strTime;
     }
 
-    render() {
+    updateCellState(updatedStockPrice) {
         if (this.stockPrice !== -1) {
-            if (+this.stockPrice > +this.props.stockPrice) {
-                this.colorClass = 'decreasePrice';
-            } else if (+this.stockPrice < +this.props.stockPrice) {
-                this.colorClass = 'increasePrice';
+            if (+this.stockPrice > +updatedStockPrice) {
+                this.colorClass = Constants.CSSStyleClass.PRICE_DECREASE_BACKGROUND;
+            } else if (+this.stockPrice < +updatedStockPrice) {
+                this.colorClass = Constants.CSSStyleClass.PRICE_INCREASE_BACKGROUND;
             } else {
-                this.colorClass = '';
+                this.colorClass = Constants.StringUtility.EMPTY;
             }
         }
 
-        if (this.stockPrice !== this.props.stockPrice) {
+        if (this.stockPrice !== updatedStockPrice) {
             this.updateTimeStamp = new Date();
-            this.stockPrice = this.props.stockPrice;
+            this.stockPrice = updatedStockPrice;
         } 
 
         this.stockHistory.push(this.stockPrice);
+    }
+
+    render() {
+        this.updateCellState(this.props.stockPrice);
 
         return (
             <tr>
                 <td>{this.stockName}</td>
                 <td className={this.colorClass}>{this.stockPrice}</td>
-                <td className={'chartBackground'}>
+                <td className={Constants.CSSStyleClass.CHART_CELL_BACKGROUND}>
                     <SparkLineComponent stockHistory={this.stockHistory} />
                 </td>
                 <td>{this.formatAMPM(this.updateTimeStamp)}</td>
