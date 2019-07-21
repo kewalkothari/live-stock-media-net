@@ -1,9 +1,6 @@
 import React from 'react';
 import TableComponent from '../../Component/TableCompoenent/TableComponent';
-
-import './StocksComponent.css'
-
-const socketURL = 'ws://stocks.mnet.website';
+import * as Constants from '../../Constants/constant_strings';
 
 export default class StocksComponent extends React.Component {
 
@@ -12,13 +9,7 @@ export default class StocksComponent extends React.Component {
         this.state = {
             stockData: {}
         }
-        this.webSocket = new WebSocket(socketURL);
-    }
-
-    render() {
-        return (
-                <TableComponent tableData={this.state.stockData}></TableComponent>
-        );
+        this.webSocket = new WebSocket(Constants.WebSocketServerURL);
     }
 
     componentDidMount() {
@@ -28,7 +19,6 @@ export default class StocksComponent extends React.Component {
 
         this.webSocket.onmessage = event => {
             let stockDataMessage = JSON.parse(event.data);
-
             let state_stocks = {...this.state.stockData };
 
             stockDataMessage.forEach(data => {
@@ -45,6 +35,12 @@ export default class StocksComponent extends React.Component {
         this.webSocket.onclose = () => {
             console.log('Connection Disconnected!');
         }
+    }
 
+    render() {
+        
+        return (
+                <TableComponent tableData={this.state.stockData}></TableComponent>
+        );
     }
 }

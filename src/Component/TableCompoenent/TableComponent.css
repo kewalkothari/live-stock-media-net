@@ -42,3 +42,7 @@ tbody > tr:hover {
     background: #92949614;
     box-shadow: 0px 2px 5px #888, 0px 0px 5px #888;
 }
+
+.trendBlock {
+    width: 150px;
+}
