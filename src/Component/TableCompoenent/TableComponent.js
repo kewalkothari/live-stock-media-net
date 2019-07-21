@@ -27,7 +27,7 @@ export default class TableComponent extends React.Component {
                     <tr>
                         <th>Ticker</th>
                         <th>Price</th>
-                        <th>Trend</th>
+                        <th width={150}>Trend</th>
                         <th>Last Updated</th>
                     </tr>
                 </thead>
