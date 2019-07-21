@@ -7,6 +7,7 @@ You might have to enable the insecure connection from the popup in the address b
 
 ## Build status
 Build status of continuous integration i.e. travis 
+Deployment automation status can be viewed here: https://travis-ci.com/kewalkothari/live-stock-media-net/
 
 [![Build Status](https://travis-ci.com/kewalkothari/live-stock-media-net.svg?branch=master)](https://travis-ci.com/kewalkothari/)
 
