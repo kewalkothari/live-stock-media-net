@@ -18,6 +18,11 @@ export default class TableRowComponent extends React.Component {
         this.updateTimeStamp = new Date();
     }
 
+    /**
+     * Updates the date/time in AM PM format.
+     * 
+     * @param {Date} date 
+     */
     formatAMPM(date) {
         let hours = date.getHours();
         let minutes = date.getMinutes();
@@ -33,6 +38,11 @@ export default class TableRowComponent extends React.Component {
         return strTime;
     }
 
+    /**
+     * Updates cell data after checking if required.
+     * 
+     * @param {number} updatedStockPrice 
+     */
     updateCellState(updatedStockPrice) {
         if (this.stockPrice !== -1) {
             if (+this.stockPrice > +updatedStockPrice) {
