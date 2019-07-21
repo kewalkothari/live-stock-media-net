@@ -17,4 +17,4 @@ Deployment automation status can be viewed here: https://travis-ci.com/kewalkoth
 - [React](https://reactjs.org/)
 
 ## How to use?
-You might have to enable and let an insecure connection from the browser as the websocket URL is 'ws' and not 'wss' therefore it is objected in https connection. Github pages come with https connection.
+You might have to enable and let an insecure connection from the browser as the websocket URL is 'ws' and not 'wss' which is restricted in https connection. Github pages come with https connection.
